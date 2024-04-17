@@ -24,6 +24,11 @@ const emberekLista = [
     kor: 19,
     nem: true,
   },
+  {
+    nev: "béla",
+    kor: 29,
+    nem: false,
+  },
 ];
 
 export default emberekLista;

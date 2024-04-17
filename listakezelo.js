@@ -29,7 +29,7 @@ const listakezelo = () => {
   console.log(oregFerfiak);
 
   emberekLista.sort((a, b) => {
-    return b.kor - a.kor;
+    return a.kor - b.kor;
   });
 
   console.log(emberekLista);
