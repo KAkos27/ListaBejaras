@@ -3,12 +3,12 @@ export const tablaazatOsszeallit = (lista) => {
   txt += `<table class='table table-striped'>`;
   txt += `<tr><th>Név</th><th>Kor</th><th>Nem</th><th></th></tr>`;
 
-  lista.forEach((ember) => {
+  lista.forEach((ember, i) => {
     txt += `<tr>`;
     for (const key in ember) {
       txt += `<td>${ember[key]}</td>`;
     }
-    txt += `<td>❌</td> 
+    txt += `<td id="${i}" class="kuka">❌</td> 
             </tr>`;
   });
   txt += `</table>`;
