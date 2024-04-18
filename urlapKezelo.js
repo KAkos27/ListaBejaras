@@ -1,12 +1,6 @@
 import { init } from "./main.js";
 
 const adatokListaba = (lista) => {
-  let adat = {
-    nev: "",
-    kor: 0,
-    nem: true,
-  };
-
   const submitElem = $("#submit");
 
   submitElem.on("click", (event) => {
@@ -16,7 +10,7 @@ const adatokListaba = (lista) => {
     const korElem = $("#kor");
     const nemElem = $("input[name='nem']:checked");
 
-    adat = {
+    const adat = {
       nev: nevElem.val(),
       kor: korElem.val(),
       nem: nemElem.val() === "true" ? true : false,
