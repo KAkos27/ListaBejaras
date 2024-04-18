@@ -1,12 +1,14 @@
 import emberekLista from "./adat.js";
 import { szuresNevSzerint, tablazatRendez, sorTorles } from "./adatKezelo.js";
 import { tablaazatOsszeallit, megjelenites } from "./fuggvenyek.js";
+import adatokListaba from "./urlapKezelo.js";
 
 let nevIrany = 1;
 init(emberekLista);
 nevSzuresEsemeny();
+adatokListaba(emberekLista);
 
-function init(lista) {
+export function init(lista) {
   const txt = tablaazatOsszeallit(emberekLista);
   megjelenites(txt);
   nevRendezEsemeny(lista);
@@ -25,9 +27,9 @@ function nevRendezEsemeny(lista) {
 function nevSzuresEsemeny() {
   const szuroElem = $("#kereses");
   szuroElem.on("keyup", () => {
-    const szuroSzoveg = szuroElem.val();
-    const lista = szuresNevSzerint(emberekLista, szuroSzoveg);
-    init(lista);
+    let szuroSzoveg = szuroElem.val();
+    const ujLista = szuresNevSzerint(emberekLista, szuroSzoveg);
+    init(ujLista);
   });
 }
 
